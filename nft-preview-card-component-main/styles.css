@@ -1,0 +1,153 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary-colors */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  /* neutral-colors */
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  /* fonts */
+  --main-font: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  color: var(--soft-blue);
+  background: var(--dark-blue-main);
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* re-usable classes */
+.flex {
+  display: flex;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+}
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+/* card */
+.container {
+  max-width: 29rem;
+  padding: 2.2rem;
+  border-radius: 1rem;
+  background: var(--dark-blue-card);
+  margin: 2rem 2rem 0 2rem;
+}
+
+/* img-section */
+.container .image-wrapper {
+  position: relative;
+}
+
+.container .main-img {
+  border-radius: 0.5rem;
+}
+
+.container .overlay {
+  position: absolute;
+  background: hsla(178, 100%, 50%, 0.5);
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.container .overlay:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+/* main-section */
+.container .title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container .title:hover,
+.container .author-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.container .purchase,
+.container .author {
+  align-items: center;
+}
+
+.container .purchase {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dark-blue-line);
+  padding-bottom: 2rem;
+}
+
+.container .price,
+.container .countdown {
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .eth-img {
+  max-height: 2rem;
+}
+
+.container .eth-price {
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+.container .author-img {
+  max-width: 3rem;
+  padding: 0.1rem;
+  background: var(--white);
+  border-radius: 100%;
+}
+
+.container .author {
+  gap: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.container .author-name {
+  color: var(--white);
+}
+
+/* attribution */
+.attribution {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2rem 2rem;
+}
+.attribution a {
+  color: var(--soft-blue);
+}
